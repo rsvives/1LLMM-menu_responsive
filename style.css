@@ -17,12 +17,53 @@
     background-color: aqua;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 12px;
+    position: relative;
+    z-index: 2;
 }
 
 .izquierda {
     display: flex;
     align-items: center;
     gap: 24px
+}
+
+.menu nav ul {
+    display: flex;
+    /* gap: 12px; */
+}
+
+a {
+    color: rgb(0, 12, 60);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    padding: 12px;
+    color: rgb(0, 12, 60);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button-primary {
+    color: white;
+    background-color: rgb(0, 12, 60);
+    border: 2px solid rgb(0, 12, 60);
+
+}
+
+.button-primary-outline {
+    color: rgb(0, 12, 60);
+    background-color: transparent;
+    border: 2px solid rgb(0, 12, 60);
 }
 
 .derecha {
@@ -42,16 +83,29 @@
     width: 24px;
 }
 
+.tablet-hidden {
+    display: none;
+}
+
 .container {
     /* max-width: 800px; */
     margin: auto;
     padding: 24px;
     background-color: rgb(172, 172, 172);
-    margin-top: 12px;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+
+@media (min-width:768px) {
+    .tablet-hidden {
+        display: inline-block;
+    }
+
+    .burger {
+        display: none;
+    }
 }
